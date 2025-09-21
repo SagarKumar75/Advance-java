@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="dev" class="org.example.Dev" autowire="byType" >
+<!--          autowire="byName"> -->
+<!--        <property name="age" value="20" ></property>  // setter injection-->
+
+<!--        <constructor-arg value="21" />   constructor injection-->
+
+<!--        <property name="Laptop" ref="lap1"></property>-->
+
+
+<!--        // autowiring-->
+<!--        <property name="com" ref="desk1">-->
+
+<!--        </property>-->
+    </bean>
+
+<!--    // creation of object-->
+<!--    <bean id="dev1" class="org.example.Dev"></bean>-->
+
+<!--    // if we use autowire byName in another beam and to want refernce another object we have name that object id as parent class object name-->
+
+<!--    // when two object have the same ref to prioritize, use primary-->
+    <bean id="desk1" class="org.example.Desktop" primary="true"></bean>
+    <bean id="lap1" class="org.example.Laptop"></bean>
+
+</beans>
